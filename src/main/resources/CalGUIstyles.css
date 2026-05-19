@@ -1,0 +1,162 @@
+/* =========================
+   TABPANE GENERAL
+========================= */
+.tab-pane {
+    -fx-background-color: #1e293b;
+}
+
+/* Fondo detrás de las tabs */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #0f172a;
+}
+
+/* =========================
+   TABS NORMALES
+========================= */
+.tab {
+    -fx-background-color: #334155;
+    -fx-background-radius: 10 10 0 0;
+    -fx-padding: 8 18 8 18;
+}
+
+/* Texto tabs */
+.tab .tab-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Hover */
+.tab:hover {
+    -fx-background-color: #475569;
+}
+
+/* =========================
+   TAB SELECCIONADA
+========================= */
+.tab:selected {
+    -fx-background-color: #2563eb;
+}
+
+/* Texto tab seleccionada */
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+/* =========================
+   CONTENIDO DEL TAB
+========================= */
+.tab-pane .tab-content-area {
+    -fx-background-color: #1e293b;
+    -fx-padding: 10;
+}
+
+/* =========================
+   BORDE INFERIOR
+========================= */
+.tab-pane *.tab-header-area *.headers-region {
+    -fx-background-color: transparent;
+}
+
+.tab-pane *.tab-header-area *.tab-down-button {
+    -fx-background-color: #334155;
+}
+
+.tab-pane *.tab-header-area *.tab-down-button:hover {
+    -fx-background-color: #475569;
+}
+/* =========================
+   FONDO GENERAL
+========================= */
+.root{
+    -fx-background-color: #1e293b;
+    -fx-font-family: "Segoe UI";
+}
+
+/* =========================
+   PANTALLA
+========================= */
+.text-field{
+    -fx-background-color: #0f172a;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 2px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.button{
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10px;
+
+    -fx-cursor: hand;
+}
+
+/* Hover */
+.button:hover{
+    -fx-background-color: #475569;
+}
+
+/* Click */
+.button:pressed{
+    -fx-background-color: #1e40af;
+}
+
+/* =========================
+   OPERADORES
+========================= */
+#BUTTONSUMAR,
+#BUTTONMENOS,
+#BUTTONMULTIPLICAR,
+#BUTTONDIVIDIR,
+#BUTTONIGUAL{
+    -fx-background-color: #2563eb;
+}
+
+#BUTTONSUMAR:hover,
+#BUTTONMENOS:hover,
+#BUTTONMULTIPLICAR:hover,
+#BUTTONDIVIDIR:hover,
+#BUTTONIGUAL:hover{
+    -fx-background-color: #3b82f6;
+}
+
+/* =========================
+   BOTONES CLEAR
+========================= */
+#BUTTONCLEARALL,
+#BUTTONCLEAR1{
+    -fx-background-color: #dc2626;
+}
+
+#BUTTONCLEARALL:hover,
+#BUTTONCLEAR1:hover{
+    -fx-background-color: #ef4444;
+}
+
+/* =========================
+   LABELS
+========================= */
+.label{
+    -fx-text-fill: white;
+}
+
+/* =========================
+   COMBOBOX
+========================= */
+.combo-box{
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+}
