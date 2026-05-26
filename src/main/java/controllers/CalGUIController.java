@@ -50,8 +50,26 @@ public class CalGUIController {
     @FXML
     private Button BUTTONDIVIDIR;
     @FXML
+    private Button BUTTONELEVAR;
+    @FXML
+    private Button BUTTONRAIZ;
+    @FXML
+    private Button BUTTONLOG;
+    @FXML
+    private Button BUTTONPI;
+    @FXML
     private TextField lblMensaje2;
     //------------------------------------------------------------------------------------------------
+
+    @FXML
+    public void initialize() {
+        // Aplica los símbolos Unicode visuales directamente al encender la GUI
+        BUTTONELEVAR.setText("x\u02E3");
+        BUTTONRAIZ.setText("\u221A");
+        BUTTONLOG.setText("log\u2081\u2080");
+        BUTTONPI.setText("\u03C0");
+    }
+
     private void digit(String d) { numActual += d; lblMensaje2.setText(numActual); }
 
     @FXML
@@ -122,17 +140,12 @@ public class CalGUIController {
                         return;
                     }
                     break;
+                case "^":
+                    resultado = Math.pow(num1, num2);
+                    break;
                 default: return;
             }
-            String resultadoTexto;
-            if (resultado % 1 == 0) {
-                resultadoTexto = String.valueOf((long) resultado);
-            } else {
-                resultadoTexto = String.valueOf(resultado);
-            }
-            lblMensaje2.setText(resultadoTexto);
-            numActual = String.valueOf(resultado);
-            operator = "";
+            mostrarResultadoFormateado(resultado);
         } catch (NumberFormatException e) {
             lblMensaje2.setText("Error");
             numActual = ""; operator = ""; num1 = 0; num2 = 0;
@@ -165,6 +178,56 @@ public class CalGUIController {
     //------------------------------------------------------------------------------------------------
 
     @FXML
+    void BUTTONELEVAR(ActionEvent event) {
+        operar("^");
+    }
+    @FXML
+    void BUTTONRAIZ(ActionEvent event) {
+        if (numActual.isEmpty()) return;
+        double x = Double.parseDouble(numActual);
+        if (x >= 0) {
+            double resultado = Math.sqrt(x);
+            mostrarResultadoFormateado(resultado);
+        } else {
+            lblMensaje2.setText("Error: Raíz Negativa");
+            numActual = "";
+        }
+    }
+
+    @FXML
+    void BUTTONLOG(ActionEvent event) {
+        if (numActual.isEmpty()) return;
+        double x = Double.parseDouble(numActual);
+        if (x > 0) {
+            double resultado = Math.log10(x);
+            mostrarResultadoFormateado(resultado);
+        } else {
+            lblMensaje2.setText("Error: Log no válido");
+            numActual = "";
+        }
+    }
+
+    @FXML
+    void BUTTONPI(ActionEvent event) {
+        numActual = String.valueOf(Math.PI);
+        lblMensaje2.setText(numActual);
+    }
+
+    private void mostrarResultadoFormateado(double resultado) {
+    String resultadoTexto;
+    if (resultado % 1 == 0) {
+        resultadoTexto = String.valueOf((long) resultado);
+    } else {
+        resultadoTexto = String.valueOf(resultado);
+    }
+    lblMensaje2.setText(resultadoTexto);
+    numActual = resultadoTexto;
+    operator = "";
+    }
+
+    //------------------------------------------------------------------------------------------------
+
+    @FXML
     void BUTTONCLEARALL(ActionEvent event) {
         num1 = 0; num2 = 0; operator = ""; numActual = "";
         lblMensaje2.setText("");
@@ -177,4 +240,3 @@ public class CalGUIController {
         lblMensaje2.setText(numActual.isEmpty() ? "0" : numActual);
     }
 }
-    //------------------------------------------------------------------------------------------------

@@ -7,13 +7,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CalEcuacionesController implements Initializable {
-
-    //------------------------------------------------------------------------------------------------
 
     @FXML
     private ComboBox<String> COMBOTIPO;
@@ -34,7 +33,10 @@ public class CalEcuacionesController implements Initializable {
     @FXML
     private TextField FIELDRESULTADO;
 
-    //------------------------------------------------------------------------------------------------
+    // HBox contenedor del campo D
+    @FXML
+    private HBox HBOXD;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         COMBOTIPO.setItems(FXCollections.observableArrayList("Lineal", "Cuadrática"));
@@ -42,36 +44,38 @@ public class CalEcuacionesController implements Initializable {
         actualizarVista("Lineal");
     }
 
-    //------------------------------------------------------------------------------------------------
     @FXML void COMBOTIPO(ActionEvent event) {
         actualizarVista(COMBOTIPO.getValue());
         limpiarCampos();
     }
 
     private void actualizarVista(String tipo) {
-        boolean esCuadratica = tipo.equals("Cuadrática");
+        boolean esCuadratica = tipo != null && tipo.equals("Cuadrática");
 
         if (esCuadratica) {
-            // Cuadrática: ax² + bx + c = d
             LBLFORMULA.setText("ax² + bx + c = d");
             LBLC.setText("c =");
             FIELDC.setPromptText("ej: 7");
-            LBLD.setVisible(true);
-            FIELDD.setVisible(true);
         } else {
-            // Lineal: ax + b = c
             LBLFORMULA.setText("ax + b = c");
             LBLC.setText("c =");
             FIELDC.setPromptText("ej: 7");
-            LBLD.setVisible(false);
-            FIELDD.setVisible(false);
+        }
+
+        // Mostrar/ocultar el contenedor completo de D y controlar managed para evitar huecos
+        if (HBOXD != null) {
+            HBOXD.setVisible(esCuadratica);
+            HBOXD.setManaged(esCuadratica);
+        } else {
+            // Fallback por si no se ha enlazado: ocultar hijos individualmente
+            LBLD.setVisible(esCuadratica);
+            FIELDD.setVisible(esCuadratica);
         }
 
         LBLC.setVisible(true);
         FIELDC.setVisible(true);
     }
 
-    //------------------------------------------------------------------------------------------------
     @FXML void BUTTONCALCULAR(ActionEvent event) {
         String tipo = COMBOTIPO.getValue();
         if (tipo == null) return;
@@ -86,18 +90,14 @@ public class CalEcuacionesController implements Initializable {
         }
     }
 
-    //------------------------------------------------------------------------------------------------
     @FXML void BUTTONLIMPIAR(ActionEvent event) {
         limpiarCampos();
     }
 
-    //------------------------------------------------------------------------------------------------
     private void calcularLineal() {
         double a = Double.parseDouble(FIELDA.getText());
         double b = Double.parseDouble(FIELDB.getText());
         double c = Double.parseDouble(FIELDC.getText());
-
-        // ax + b = c  →  ax = c - b  →  x = (c - b)/a
         double resultado = (c - b) / a;
         FIELDRESULTADO.setText("x = " + resultado);
     }
@@ -108,9 +108,7 @@ public class CalEcuacionesController implements Initializable {
         double c = Double.parseDouble(FIELDC.getText());
         double d = Double.parseDouble(FIELDD.getText());
 
-        // ax² + bx + c = d  →  ax² + bx + (c - d) = 0
         double cAjustado = c - d;
-
         double discriminante = b*b - 4*a*cAjustado;
 
         if (discriminante < 0) {
@@ -122,7 +120,6 @@ public class CalEcuacionesController implements Initializable {
         }
     }
 
-    //------------------------------------------------------------------------------------------------
     private void limpiarCampos() {
         FIELDA.clear();
         FIELDB.clear();
@@ -131,4 +128,3 @@ public class CalEcuacionesController implements Initializable {
         FIELDRESULTADO.clear();
     }
 }
-    //------------------------------------------------------------------------------------------------

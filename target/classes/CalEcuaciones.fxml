@@ -1,48 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalEcuacionesController">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalEcuacionesController">
     <children>
+        <VBox alignment="TOP_CENTER" spacing="14.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
 
-        <!-- Selector tipo de ecuación -->
-        <Label layoutX="20.0" layoutY="22.0" text="Tipo de ecuación:" />
-        <ComboBox fx:id="COMBOTIPO" layoutX="140.0" layoutY="18.0" onAction="#COMBOTIPO" prefWidth="150.0" />
+                <!-- GridPane para inputs: control de anchos por columnas -->
+                <GridPane alignment="CENTER" hgap="12.0" prefWidth="400.0" vgap="12.0">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="15.0" />
+                        <ColumnConstraints percentWidth="35.0" />
+                        <ColumnConstraints percentWidth="15.0" />
+                        <ColumnConstraints percentWidth="35.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="50.0" />
+                        <RowConstraints percentHeight="50.0" />
+                  <RowConstraints />
+                    </rowConstraints>
 
-        <!-- Etiqueta de la fórmula (cambia según el tipo) -->
-        <Label fx:id="LBLFORMULA" layoutX="20.0" layoutY="55.0" text="ax + b = c" />
+                    <!-- Fila 0: etiqueta + ComboBox (ocupa columnas 0..3) -->
+                    <children>
+                        <Label prefWidth="120.0" styleClass="field-label" text="Tipo de ecuación:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="COMBOTIPO" onAction="#COMBOTIPO" prefWidth="260.0" promptText="Seleccione..." GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="0" />
 
-        <!-- Lineal: a, b = c -->
-        <!-- Cuadrática: a, b, c = d -->
+                        <!-- Fila 1 (rowIndex=1) : a y b -->
+                        <Label minWidth="56.0" prefWidth="56.0" styleClass="field-label" text="a =" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="FIELDA" maxWidth="Infinity" prefWidth="160.0" promptText="Ej: 5" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
 
-        <!-- Campo a -->
-        <Label layoutX="20.0" layoutY="95.0" text="a =" />
-        <TextField fx:id="FIELDA" layoutX="40.0" layoutY="90.0" prefHeight="25.0" prefWidth="69.0" promptText="Ej: 5" />
+                        <Label minWidth="56.0" prefWidth="56.0" styleClass="field-label" text="b =" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="FIELDB" maxWidth="Infinity" prefWidth="160.0" promptText="Ej: 6" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
 
-        <!-- Campo b -->
-        <Label layoutX="123.0" layoutY="96.0" text="b =" />
-        <TextField fx:id="FIELDB" layoutX="143.0" layoutY="91.0" prefHeight="25.0" prefWidth="69.0" promptText="Ej: 6" />
+                        <!-- Fila 2 (rowIndex=2): c y (contenedor D) -->
+                        <Label fx:id="LBLC" minWidth="56.0" prefWidth="56.0" styleClass="field-label" text="c =" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="FIELDC" maxWidth="Infinity" prefWidth="160.0" promptText="Ej: 7" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
 
-        <!-- Campo c (en cuadrática es coeficiente, en lineal es el lado derecho) -->
-        <Label fx:id="LBLC" layoutX="224.0" layoutY="95.0" text="c =" />
-        <TextField fx:id="FIELDC" layoutX="244.0" layoutY="90.0" prefHeight="25.0" prefWidth="69.0" promptText="Ej: 7" />
+                        <!-- HBox contenedor de D (gestión desde controlador) -->
+                        <HBox fx:id="HBOXD" alignment="CENTER_LEFT" managed="false" spacing="10.0" visible="false" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                            <children>
+                                <Label fx:id="LBLD" minWidth="56.0" prefWidth="56.0" styleClass="field-label" text="d =" />
+                                <TextField fx:id="FIELDD" maxWidth="Infinity" prefWidth="220.0" promptText="Ej: 2" GridPane.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
 
-        <!-- Campo d = lado derecho (solo cuadrática) -->
-        <Label fx:id="LBLD" layoutX="285.0" layoutY="95.0" text="= d" visible="false" />
-        <TextField fx:id="FIELDD" layoutX="305.0" layoutY="90.0" prefWidth="45.0" promptText="ej: 2" visible="false" />
+                    </children>
+                </GridPane>
 
-        <!-- Botones -->
-        <Button fx:id="BUTTONCALCULAR" layoutX="80.0" layoutY="140.0" onAction="#BUTTONCALCULAR" prefHeight="32.0" prefWidth="100.0" styleClass="btn-igual" text="Calcular" />
+                <!-- Fórmula: se baja un poco con VBox.margin -->
+                <Label id="LBLFORMULA" fx:id="LBLFORMULA" prefWidth="400.0" styleClass="" text="ax + b = c" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="12.0" />
+                    </VBox.margin>
+                </Label>
 
-        <Button fx:id="BUTTONLIMPIAR" layoutX="195.0" layoutY="140.0" onAction="#BUTTONLIMPIAR" prefHeight="32.0" prefWidth="100.0" styleClass="btn-borrar" text="Limpiar" />
+                <!-- Botones -->
+                <HBox alignment="CENTER" spacing="12.0">
+                    <children>
+                        <Button id="BUTTONCALCULAR" fx:id="BUTTONCALCULAR" onAction="#BUTTONCALCULAR" prefHeight="36.0" prefWidth="140.0" text="Calcular" />
+                        <Button fx:id="BUTTONLIMPIAR" onAction="#BUTTONLIMPIAR" prefHeight="36.0" prefWidth="140.0" styleClass="btn-borrar" text="Limpiar" />
+                    </children>
+                </HBox>
 
-        <!-- Resultado -->
-        <Label layoutX="20.0" layoutY="195.0" text="Resultado:" />
-        <TextField fx:id="FIELDRESULTADO" editable="false" layoutX="20.0" layoutY="215.0" prefWidth="330.0" promptText="Resultado" />
+                <!-- Resultado -->
+                <HBox alignment="CENTER_LEFT" spacing="8.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="68.0" styleClass="field-label" text="Resultado:" />
+                        <TextField fx:id="FIELDRESULTADO" editable="false" prefWidth="340.0" promptText="Resultado" />
+                    </children>
+                </HBox>
 
+            </children>
+            <padding>
+                <Insets bottom="8" left="8" right="8" top="8" />
+            </padding>
+        </VBox>
     </children>
 </AnchorPane>

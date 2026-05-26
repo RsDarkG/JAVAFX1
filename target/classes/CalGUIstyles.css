@@ -1,162 +1,209 @@
-/* =========================
-   TABPANE GENERAL
-========================= */
 .tab-pane {
     -fx-background-color: #1e293b;
 }
-
-/* Fondo detrás de las tabs */
 .tab-pane .tab-header-area .tab-header-background {
     -fx-background-color: #0f172a;
 }
-
-/* =========================
-   TABS NORMALES
-========================= */
 .tab {
     -fx-background-color: #334155;
     -fx-background-radius: 10 10 0 0;
     -fx-padding: 8 18 8 18;
 }
-
-/* Texto tabs */
 .tab .tab-label {
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
 }
-
-/* Hover */
 .tab:hover {
     -fx-background-color: #475569;
 }
-
-/* =========================
-   TAB SELECCIONADA
-========================= */
 .tab:selected {
     -fx-background-color: #2563eb;
 }
-
-/* Texto tab seleccionada */
 .tab:selected .tab-label {
     -fx-text-fill: white;
 }
-
-/* =========================
-   CONTENIDO DEL TAB
-========================= */
 .tab-pane .tab-content-area {
     -fx-background-color: #1e293b;
     -fx-padding: 10;
 }
-
-/* =========================
-   BORDE INFERIOR
-========================= */
 .tab-pane *.tab-header-area *.headers-region {
     -fx-background-color: transparent;
 }
-
 .tab-pane *.tab-header-area *.tab-down-button {
     -fx-background-color: #334155;
 }
-
 .tab-pane *.tab-header-area *.tab-down-button:hover {
     -fx-background-color: #475569;
 }
-/* =========================
-   FONDO GENERAL
-========================= */
-.root{
+.root {
     -fx-background-color: #1e293b;
     -fx-font-family: "Segoe UI";
 }
-
-/* =========================
-   PANTALLA
-========================= */
-.text-field{
+.text-field {
     -fx-background-color: #0f172a;
     -fx-text-fill: white;
     -fx-font-size: 20px;
     -fx-font-weight: bold;
-
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
-
     -fx-border-color: #3b82f6;
     -fx-border-width: 2px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 6 10 6 10;
 }
-
-/* =========================
-   BOTONES
-========================= */
-.button{
+.button {
     -fx-background-color: #334155;
     -fx-text-fill: white;
-
     -fx-font-size: 16px;
     -fx-font-weight: bold;
-
     -fx-background-radius: 10px;
-
     -fx-cursor: hand;
 }
-
-/* Hover */
-.button:hover{
+.button:hover {
     -fx-background-color: #475569;
 }
-
-/* Click */
-.button:pressed{
+.button:pressed {
     -fx-background-color: #1e40af;
 }
-
-/* =========================
-   OPERADORES
-========================= */
+.label {
+    -fx-text-fill: white;
+}
+.combo-box {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+}
 #BUTTONSUMAR,
 #BUTTONMENOS,
 #BUTTONMULTIPLICAR,
 #BUTTONDIVIDIR,
-#BUTTONIGUAL{
+#BUTTONIGUAL {
     -fx-background-color: #2563eb;
 }
-
 #BUTTONSUMAR:hover,
 #BUTTONMENOS:hover,
 #BUTTONMULTIPLICAR:hover,
 #BUTTONDIVIDIR:hover,
-#BUTTONIGUAL:hover{
+#BUTTONIGUAL:hover {
+    -fx-background-color: #3b82f6;
+}
+#BUTTONCLEARALL,
+#BUTTONCLEAR1 {
+    -fx-background-color: #dc2626;
+}
+#BUTTONCLEARALL:hover,
+#BUTTONCLEAR1:hover {
+    -fx-background-color: #ef4444;
+}
+.controls-grid {
+    -fx-hgap: 8px;
+    -fx-vgap: 8px;
+}
+.controls-grid .button {
+    -fx-pref-width: 64px;
+    -fx-pref-height: 36px;
+    -fx-min-width: 56px;
+    -fx-min-height: 32px;
+}
+.eq-field {
+    -fx-pref-width: 160px;
+    -fx-min-width: 120px;
+    -fx-font-size: 14px;
+    -fx-padding: 6 8 6 8;
+}
+.field-label {
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Arial", "System";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+.btn-igual {
+    -fx-background-color: linear-gradient(#10b981, #059669);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-padding: 6 12 6 12;
+}
+.btn-borrar {
+    -fx-background-color: linear-gradient(#ef4444, #dc2626);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-padding: 6 12 6 12;
+}
+#BUTTONCALCULAR {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-padding: 6 12 6 12;
+}
+#BUTTONCALCULAR:hover {
+    -fx-background-color: #3b82f6;
+}
+#BUTTONCALCULAR:pressed {
+    -fx-background-color: #1e40af;
+}
+
+.bin-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.bin-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.bin-field {
+    -fx-background-color: #0f172a;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 1px;
+    -fx-padding: 6 8 6 8;
+}
+
+.bin-btn-convert {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.bin-btn-convert:hover {
     -fx-background-color: #3b82f6;
 }
 
-/* =========================
-   BOTONES CLEAR
-========================= */
-#BUTTONCLEARALL,
-#BUTTONCLEAR1{
-    -fx-background-color: #dc2626;
+.bin-btn-convert:pressed {
+    -fx-background-color: #1e40af;
 }
 
-#BUTTONCLEARALL:hover,
-#BUTTONCLEAR1:hover{
-    -fx-background-color: #ef4444;
-}
-
-/* =========================
-   LABELS
-========================= */
-.label{
-    -fx-text-fill: white;
-}
-
-/* =========================
-   COMBOBOX
-========================= */
-.combo-box{
+.bin-btn-op {
     -fx-background-color: #334155;
     -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.bin-btn-op:hover {
+    -fx-background-color: #475569;
+}
+
+.bin-btn-op:pressed {
+    -fx-background-color: #1e40af;
+}
+
+/* Regla específica para la etiqueta de fórmula en CalEcuaciones.fxml */
+#LBLFORMULA {
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
 }

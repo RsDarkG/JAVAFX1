@@ -5,18 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42046d98-3268-4cd4-b523-131fd6e2fcbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Paths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/CalEcuacionesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/CalGUIController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CalEcuaciones.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CalGUI.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CalGUIstyles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/CalBinariosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CalBinarios.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalEcuacionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CalEcuacionesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CalGUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CalEcuaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalEcuaciones.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CalGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CalGUIstyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalGUIstyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CalEcuaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalEcuaciones.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CalGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CalGUIstyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalGUIstyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CalEcuacionesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CalEcuacionesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CalGUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CalGUIController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +27,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="4caafdb6-f797-4870-8495-e6b39f747c81" />
+        <option name="activeSessionId" value="4bacba95-1c10-4b56-bfa5-24027e42f899" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -51,6 +52,42 @@
             <option name="modeId" value="Agent" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="80fc763e-7853-4010-8031-c5c59167fecc" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Processing" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="27913621-5730-4ab5-b948-8a2a7bac9692" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="e360aa26-596c-45af-8519-4898f5e6ea5e" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="4bacba95-1c10-4b56-bfa5-24027e42f899" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
             <option name="targetType" value="LOCAL" />
           </session>
         </option>
@@ -79,6 +116,65 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.032912707194285E-155" />
+      <entry key="S2" value="2.7869665769000477E-39" />
+      <entry key="S5" value="3.7855546816629086E-16" />
+      <entry key="S10" value="1.98620493735354E-8" />
+      <entry key="S30" value="0.005398675102959008" />
+      <entry key="S60" value="0.2423655843297899" />
+      <entry key="M2" value="2.196152611398463" />
+      <entry key="M5" value="11.895129461255" />
+      <entry key="M10" value="26.129035605390644" />
+      <entry key="M15" value="35.63128619444365" />
+      <entry key="M30" value="50.22374495333178" />
+      <entry key="H1" value="61.17761159884475" />
+      <entry key="H2" value="68.68585898226743" />
+      <entry key="H4" value="73.3692212504566" />
+      <entry key="D1" value="77.98072481621189" />
+      <entry key="W1" value="78.85217195097701" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000008113983168" />
+      <entry key="S60" value="1.0012739500966699" />
+      <entry key="M2" value="1.0524112908742427" />
+      <entry key="M5" value="1.61056600392797" />
+      <entry key="M10" value="2.6262544486735195" />
+      <entry key="M15" value="3.3248216870434057" />
+      <entry key="M30" value="4.397766183727155" />
+      <entry key="H1" value="5.236355923744191" />
+      <entry key="H2" value="5.893022372365102" />
+      <entry key="H4" value="6.362204405313531" />
+      <entry key="D1" value="6.878303003862671" />
+      <entry key="W1" value="6.982176803751514" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.002879432065021682" />
+      <entry key="MS500" value="0.3103568728815281" />
+      <entry key="S2" value="0.7463891916484765" />
+      <entry key="S5" value="0.889582307283877" />
+      <entry key="S10" value="0.9431767303500842" />
+      <entry key="S30" value="0.9860512015380268" />
+      <entry key="S60" value="1.2323678490794192" />
+      <entry key="M2" value="3.234379092391991" />
+      <entry key="M5" value="13.480037665599761" />
+      <entry key="M10" value="28.726817840821187" />
+      <entry key="M15" value="38.93003810862198" />
+      <entry key="M30" value="54.603064415573826" />
+      <entry key="H1" value="66.40281088466706" />
+      <entry key="H2" value="74.57268134055928" />
+      <entry key="H4" value="79.72813919627745" />
+      <entry key="D1" value="84.85845012294459" />
+      <entry key="W1" value="85.83426542516911" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -115,7 +211,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/user/IdeaProjects/JAVAFX/src/main/resources",
@@ -147,6 +243,14 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="42046d98-3268-4cd4-b523-131fd6e2fcbf" name="Changes" comment="" />
@@ -166,6 +270,7 @@
       <workItem from="1778636007267" duration="24000" />
       <workItem from="1778636140304" duration="12877000" />
       <workItem from="1778694340315" duration="19099000" />
+      <workItem from="1779740296177" duration="10279000" />
     </task>
     <servers />
   </component>
