@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42046d98-3268-4cd4-b523-131fd6e2fcbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/CalBinariosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CalBinarios.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalEcuacionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CalEcuacionesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CalGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CalEcuaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalEcuaciones.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CalGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CalGUIstyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalGUIstyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CalEcuaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalEcuaciones.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CalGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CalGUIstyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalGUIstyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CalEcuacionesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CalEcuacionesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/CalGUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CalGUIController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +19,7 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="4bacba95-1c10-4b56-bfa5-24027e42f899" />
+        <option name="activeSessionId" value="434a8577-669f-47f0-8ce7-a50c1d651cbc" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
@@ -60,7 +52,7 @@
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="auto" />
-            <option name="status" value="Processing" />
+            <option name="status" value="Stopped" />
             <option name="targetType" value="LOCAL" />
           </session>
           <session>
@@ -84,6 +76,32 @@
           <session>
             <option name="chatType" value="PANEL" />
             <option name="id" value="4bacba95-1c10-4b56-bfa5-24027e42f899" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="c27b584b-8786-4755-b513-22e9068055c7" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="66562dc7-2434-4885-95e0-1dee870ef52d" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="434a8577-669f-47f0-8ce7-a50c1d651cbc" />
             <option name="modeId" value="Ask" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="auto" />
@@ -119,61 +137,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.032912707194285E-155" />
-      <entry key="S2" value="2.7869665769000477E-39" />
-      <entry key="S5" value="3.7855546816629086E-16" />
-      <entry key="S10" value="1.98620493735354E-8" />
-      <entry key="S30" value="0.005398675102959008" />
-      <entry key="S60" value="0.2423655843297899" />
-      <entry key="M2" value="2.196152611398463" />
-      <entry key="M5" value="11.895129461255" />
-      <entry key="M10" value="26.129035605390644" />
-      <entry key="M15" value="35.63128619444365" />
-      <entry key="M30" value="50.22374495333178" />
-      <entry key="H1" value="61.17761159884475" />
-      <entry key="H2" value="68.68585898226743" />
-      <entry key="H4" value="73.3692212504566" />
-      <entry key="D1" value="77.98072481621189" />
-      <entry key="W1" value="78.85217195097701" />
+      <entry key="MS100" value="1.000270890984422" />
+      <entry key="MS500" value="1.1954464006742977" />
+      <entry key="S2" value="1.9413417420445596" />
+      <entry key="S5" value="2.724948761542423" />
+      <entry key="S10" value="3.2618105854946746" />
+      <entry key="S30" value="4.315795470069192" />
+      <entry key="S60" value="5.299605997678567" />
+      <entry key="M2" value="7.371973188895925" />
+      <entry key="M5" value="16.570873729432364" />
+      <entry key="M10" value="30.76631369636667" />
+      <entry key="M15" value="40.514163242592865" />
+      <entry key="M30" value="55.74539398031391" />
+      <entry key="H1" value="67.28018376038517" />
+      <entry key="H2" value="75.18292517653566" />
+      <entry key="H4" value="80.1008648467699" />
+      <entry key="D1" value="84.93323002207305" />
+      <entry key="W1" value="85.84531228217345" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000008113983168" />
-      <entry key="S60" value="1.0012739500966699" />
-      <entry key="M2" value="1.0524112908742427" />
-      <entry key="M5" value="1.61056600392797" />
-      <entry key="M10" value="2.6262544486735195" />
-      <entry key="M15" value="3.3248216870434057" />
-      <entry key="M30" value="4.397766183727155" />
-      <entry key="H1" value="5.236355923744191" />
-      <entry key="H2" value="5.893022372365102" />
-      <entry key="H4" value="6.362204405313531" />
-      <entry key="D1" value="6.878303003862671" />
-      <entry key="W1" value="6.982176803751514" />
+      <entry key="MS100" value="9.228581870377448E-221" />
+      <entry key="MS500" value="9.840722695528584E-45" />
+      <entry key="S2" value="9.959940602798011E-12" />
+      <entry key="S5" value="3.974684849428193E-5" />
+      <entry key="S10" value="0.006304510170844516" />
+      <entry key="S30" value="0.18473568797622966" />
+      <entry key="S60" value="0.43035627753252287" />
+      <entry key="M2" value="0.6899587254870067" />
+      <entry key="M5" value="1.3602964751135849" />
+      <entry key="M10" value="2.41359458922811" />
+      <entry key="M15" value="3.142823850933097" />
+      <entry key="M30" value="4.275707389022496" />
+      <entry key="H1" value="5.163177779457725" />
+      <entry key="H2" value="5.851699960743118" />
+      <entry key="H4" value="6.339858984904465" />
+      <entry key="D1" value="6.8742707541263135" />
+      <entry key="W1" value="6.981591922017121" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.002879432065021682" />
-      <entry key="MS500" value="0.3103568728815281" />
-      <entry key="S2" value="0.7463891916484765" />
-      <entry key="S5" value="0.889582307283877" />
-      <entry key="S10" value="0.9431767303500842" />
-      <entry key="S30" value="0.9860512015380268" />
-      <entry key="S60" value="1.2323678490794192" />
-      <entry key="M2" value="3.234379092391991" />
-      <entry key="M5" value="13.480037665599761" />
-      <entry key="M10" value="28.726817840821187" />
-      <entry key="M15" value="38.93003810862198" />
-      <entry key="M30" value="54.603064415573826" />
-      <entry key="H1" value="66.40281088466706" />
-      <entry key="H2" value="74.57268134055928" />
-      <entry key="H4" value="79.72813919627745" />
-      <entry key="D1" value="84.85845012294459" />
-      <entry key="W1" value="85.83426542516911" />
+      <entry key="MS100" value="0.8124679000174643" />
+      <entry key="MS500" value="1.1459826358544687" />
+      <entry key="S2" value="1.9195594098100859" />
+      <entry key="S5" value="2.7110853155916175" />
+      <entry key="S10" value="3.258595313922899" />
+      <entry key="S30" value="4.490857370822892" />
+      <entry key="S60" value="5.720386037494173" />
+      <entry key="M2" value="8.049523510751552" />
+      <entry key="M5" value="17.90801157162392" />
+      <entry key="M10" value="33.15294996723624" />
+      <entry key="M15" value="43.63180542182861" />
+      <entry key="M30" value="60.00289142097523" />
+      <entry key="H1" value="72.43222174592029" />
+      <entry key="H2" value="81.02839869326448" />
+      <entry key="H4" value="86.43741386947823" />
+      <entry key="D1" value="91.80691756387361" />
+      <entry key="W1" value="92.82682004502844" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -202,32 +220,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Application.executor": "Run",
-    "Application.fx.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/IdeaProjects/JAVAFX/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "CodeWithMe",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.fx.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/JAVAFX/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\JAVAFX\src\main\resources" />
@@ -270,7 +289,8 @@
       <workItem from="1778636007267" duration="24000" />
       <workItem from="1778636140304" duration="12877000" />
       <workItem from="1778694340315" duration="19099000" />
-      <workItem from="1779740296177" duration="10279000" />
+      <workItem from="1779740296177" duration="10599000" />
+      <workItem from="1779756398856" duration="2193000" />
     </task>
     <servers />
   </component>
