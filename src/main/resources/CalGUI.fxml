@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -10,11 +11,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane prefHeight="460.0" prefWidth="560.0" styleClass="app-tabpane" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalGUIController">
+<TabPane prefHeight="560.0" prefWidth="560.0" styleClass="app-tabpane" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalGUIController">
     <tabs>
         <Tab text="Calculadora">
             <content>
-                <AnchorPane prefHeight="420.0" prefWidth="560.0">
+                <AnchorPane prefHeight="520.0" prefWidth="560.0">
                     <children>
                         <VBox alignment="CENTER" spacing="12.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                             <children>
@@ -73,8 +74,18 @@
                                         <Button fx:id="BUTTONTANGENTE" mnemonicParsing="false" onAction="#BUTTONTANGENTE" prefHeight="36.0" prefWidth="74.0" styleClass="btn-clear" text="Tan" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                                         <Button fx:id="BUTTONSENO" mnemonicParsing="false" onAction="#BUTTONSENO" prefHeight="36.0" prefWidth="74.0" styleClass="btn-clear" text="Sen" GridPane.columnIndex="4" />
                                         <Button fx:id="BUTTONCOSENO" mnemonicParsing="false" onAction="#BUTTONCOSENO" prefHeight="36.0" prefWidth="74.0" styleClass="btn-clear" text="Cos" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+                                        <!-- BOTÓN HISTORIAL -->
+                                        <Button fx:id="BUTTONHISTORIAL" mnemonicParsing="false" onAction="#BUTTONHISTORIAL" prefHeight="36.0" prefWidth="100.0" styleClass="btn-clear" text="Historial" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                                     </children>
                                 </GridPane>
+
+                                <TextArea fx:id="txtHistorial"
+                                          editable="false"
+                                          prefWidth="520.0"
+                                          prefHeight="140.0"
+                                          wrapText="true"
+                                          promptText="Aquí se mostrará el historial" />
                             </children>
                         </VBox>
                     </children>

@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42046d98-3268-4cd4-b523-131fd6e2fcbf" name="Changes" comment="">
+    <list default="true" id="42046d98-3268-4cd4-b523-131fd6e2fcbf" name="Changes" comment="Actualizacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalBinariosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CalBinariosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalEcuacionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CalEcuacionesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CalGUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CalBinarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalBinarios.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CalEcuaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalEcuaciones.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CalGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CalGUIstyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CalGUIstyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CalBinarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalBinarios.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CalEcuaciones.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalEcuaciones.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CalGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalGUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CalGUIstyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CalGUIstyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CalEcuacionesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CalEcuacionesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/CalGUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/CalGUIController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,61 +146,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000270890984422" />
-      <entry key="MS500" value="1.1954464006742977" />
-      <entry key="S2" value="1.9413417420445596" />
-      <entry key="S5" value="2.724948761542423" />
-      <entry key="S10" value="3.2618105854946746" />
-      <entry key="S30" value="4.315795470069192" />
-      <entry key="S60" value="5.299605997678567" />
-      <entry key="M2" value="7.371973188895925" />
-      <entry key="M5" value="16.570873729432364" />
-      <entry key="M10" value="30.76631369636667" />
-      <entry key="M15" value="40.514163242592865" />
-      <entry key="M30" value="55.74539398031391" />
-      <entry key="H1" value="67.28018376038517" />
-      <entry key="H2" value="75.18292517653566" />
-      <entry key="H4" value="80.1008648467699" />
-      <entry key="D1" value="84.93323002207305" />
-      <entry key="W1" value="85.84531228217345" />
+      <entry key="MS100" value="1.0075988667766584" />
+      <entry key="MS500" value="1.3768337273895952" />
+      <entry key="S2" value="1.7834971869493406" />
+      <entry key="S5" value="1.907016059342825" />
+      <entry key="S10" value="1.952373907319402" />
+      <entry key="S30" value="1.9838657208061372" />
+      <entry key="S60" value="1.9919000953146462" />
+      <entry key="M2" value="1.996577908670603" />
+      <entry key="M5" value="2.390772240328385" />
+      <entry key="M10" value="6.733597174900129" />
+      <entry key="M15" value="13.63358537803523" />
+      <entry key="M30" value="31.872290202764436" />
+      <entry key="H1" value="51.25130126336094" />
+      <entry key="H2" value="66.3257160419658" />
+      <entry key="H4" value="76.09176497782032" />
+      <entry key="D1" value="85.83649252537924" />
+      <entry key="W1" value="87.68606954209616" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="9.228581870377448E-221" />
-      <entry key="MS500" value="9.840722695528584E-45" />
-      <entry key="S2" value="9.959940602798011E-12" />
-      <entry key="S5" value="3.974684849428193E-5" />
-      <entry key="S10" value="0.006304510170844516" />
-      <entry key="S30" value="0.18473568797622966" />
-      <entry key="S60" value="0.43035627753252287" />
-      <entry key="M2" value="0.6899587254870067" />
-      <entry key="M5" value="1.3602964751135849" />
-      <entry key="M10" value="2.41359458922811" />
-      <entry key="M15" value="3.142823850933097" />
-      <entry key="M30" value="4.275707389022496" />
-      <entry key="H1" value="5.163177779457725" />
-      <entry key="H2" value="5.851699960743118" />
-      <entry key="H4" value="6.339858984904465" />
-      <entry key="D1" value="6.8742707541263135" />
-      <entry key="W1" value="6.981591922017121" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.430147745341799E-255" />
+      <entry key="S5" value="1.1538579915625912E-102" />
+      <entry key="S10" value="1.0741778212021472E-51" />
+      <entry key="S30" value="1.0241394120067874E-17" />
+      <entry key="S60" value="3.2042934416741403E-9" />
+      <entry key="M2" value="5.953538693567356E-5" />
+      <entry key="M5" value="0.0322117559775677" />
+      <entry key="M10" value="0.37141097898578335" />
+      <entry key="M15" value="0.9024995269166074" />
+      <entry key="M30" value="2.2912445639695758" />
+      <entry key="H1" value="3.779625885283642" />
+      <entry key="H2" value="5.0066579045129265" />
+      <entry key="H4" value="5.864250749814557" />
+      <entry key="D1" value="6.785504182177186" />
+      <entry key="W1" value="6.968641160173564" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8124679000174643" />
-      <entry key="MS500" value="1.1459826358544687" />
-      <entry key="S2" value="1.9195594098100859" />
-      <entry key="S5" value="2.7110853155916175" />
-      <entry key="S10" value="3.258595313922899" />
-      <entry key="S30" value="4.490857370822892" />
-      <entry key="S60" value="5.720386037494173" />
-      <entry key="M2" value="8.049523510751552" />
-      <entry key="M5" value="17.90801157162392" />
-      <entry key="M10" value="33.15294996723624" />
-      <entry key="M15" value="43.63180542182861" />
-      <entry key="M30" value="60.00289142097523" />
-      <entry key="H1" value="72.43222174592029" />
-      <entry key="H2" value="81.02839869326448" />
-      <entry key="H4" value="86.43741386947823" />
-      <entry key="D1" value="91.80691756387361" />
-      <entry key="W1" value="92.82682004502844" />
+      <entry key="MS100" value="0.9019211880864931" />
+      <entry key="MS500" value="1.3476540812657998" />
+      <entry key="S2" value="1.7741750112845376" />
+      <entry key="S5" value="1.90304180586631" />
+      <entry key="S10" value="1.9503417454533876" />
+      <entry key="S30" value="1.9831779123486801" />
+      <entry key="S60" value="1.9915548649505765" />
+      <entry key="M2" value="1.9964634222645994" />
+      <entry key="M5" value="2.422366340037082" />
+      <entry key="M10" value="7.100825085275284" />
+      <entry key="M15" value="14.528830587263217" />
+      <entry key="M30" value="34.15376496026476" />
+      <entry key="H1" value="55.02276665582002" />
+      <entry key="H2" value="71.32704377316571" />
+      <entry key="H4" value="81.95295263060007" />
+      <entry key="D1" value="92.62142078550077" />
+      <entry key="W1" value="94.65462666483945" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -290,8 +299,17 @@
       <workItem from="1778636140304" duration="12877000" />
       <workItem from="1778694340315" duration="19099000" />
       <workItem from="1779740296177" duration="10599000" />
-      <workItem from="1779756398856" duration="2193000" />
+      <workItem from="1779756398856" duration="3157000" />
     </task>
+    <task id="LOCAL-00001" summary="Actualizacion">
+      <option name="closed" value="true" />
+      <created>1779758783783</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779758783783</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +325,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Actualizacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

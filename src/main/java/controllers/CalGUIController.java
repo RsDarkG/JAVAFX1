@@ -3,7 +3,9 @@ package controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,8 +72,12 @@ public class CalGUIController {
     private Button BUTTONTANGENTE;
     @FXML
     private Button BUTTONHISTORIAL;
+
     @FXML
     private TextField lblMensaje2;
+
+    @FXML
+    private TextArea txtHistorial;
     //------------------------------------------------------------------------------------------------
 
     @FXML
@@ -80,48 +86,62 @@ public class CalGUIController {
         BUTTONRAIZ.setText("\u221A");
         BUTTONLOG.setText("log\u2081\u2080");
         BUTTONPI.setText("\u03C0");
+
+        if (txtHistorial != null) {
+            txtHistorial.setText("Historial listo.\n");
+        }
     }
 
     private void digit(String d) {
-        numActual += d; lblMensaje2.setText(numActual);
+        numActual += d;
+        lblMensaje2.setText(numActual);
     }
 
     @FXML
     void BUTTON0(ActionEvent event) {
         digit("0");
     }
+
     @FXML
     void BUTTON1(ActionEvent event) {
         digit("1");
     }
+
     @FXML
     void BUTTON2(ActionEvent event) {
         digit("2");
     }
+
     @FXML
     void BUTTON3(ActionEvent event) {
         digit("3");
     }
+
     @FXML
     void BUTTON4(ActionEvent event) {
         digit("4");
     }
+
     @FXML
     void BUTTON5(ActionEvent event) {
         digit("5");
     }
+
     @FXML
     void BUTTON6(ActionEvent event) {
         digit("6");
     }
+
     @FXML
     void BUTTON7(ActionEvent event) {
         digit("7");
     }
+
     @FXML
     void BUTTON8(ActionEvent event) {
         digit("8");
     }
+
     @FXML
     void BUTTON9(ActionEvent event) {
         digit("9");
@@ -142,6 +162,7 @@ public class CalGUIController {
             lblMensaje2.setText(numActual);
         }
     }
+
     //------------------------------------------------------------------------------------------------
     @FXML
     void BUTTONIGUAL(ActionEvent event) {
@@ -152,34 +173,48 @@ public class CalGUIController {
             num2 = Double.parseDouble(numActual);
             double resultado = 0;
             switch (operator) {
-                case "+": resultado = num1 + num2; break;
-                case "-": resultado = num1 - num2; break;
-                case "*": resultado = num1 * num2; break;
+                case "+":
+                    resultado = num1 + num2;
+                    break;
+                case "-":
+                    resultado = num1 - num2;
+                    break;
+                case "*":
+                    resultado = num1 * num2;
+                    break;
                 case "/":
                     if (num2 != 0) {
                         resultado = num1 / num2;
                     } else {
                         lblMensaje2.setText("Error: División por cero");
-                        numActual = ""; operator = ""; num1 = 0; num2 = 0;
+                        numActual = "";
+                        operator = "";
+                        num1 = 0;
+                        num2 = 0;
                         return;
                     }
                     break;
                 case "^":
                     resultado = Math.pow(num1, num2);
                     break;
-                default: return;
+                default:
+                    return;
             }
 
-            historial.add(num1 + " " + operator + " " + num2 + " = " + resultado);
+            String operacion = num1 + " " + operator + " " + num2 + " = " + resultado;
+            historial.add(operacion);
             mostrarResultadoFormateado(resultado);
+            actualizarHistorial();
         } catch (NumberFormatException e) {
             lblMensaje2.setText("Error");
-            numActual = ""; operator = ""; num1 = 0; num2 = 0;
+            numActual = "";
+            operator = "";
+            num1 = 0;
+            num2 = 0;
         }
     }
 
     //------------------------------------------------------------------------------------------------
-
     private void operar(String op) {
         if (numActual.isEmpty()) return;
         num1 = Double.parseDouble(numActual);
@@ -189,36 +224,40 @@ public class CalGUIController {
     }
 
     @FXML
-    void BUTTONSUMAR(ActionEvent event)       {
+    void BUTTONSUMAR(ActionEvent event) {
         operar("+");
     }
+
     @FXML
-    void BUTTONMENOS(ActionEvent event)       {
+    void BUTTONMENOS(ActionEvent event) {
         operar("-");
     }
+
     @FXML
     void BUTTONMULTIPLICAR(ActionEvent event) {
         operar("*");
     }
+
     @FXML
-    void BUTTONDIVIDIR(ActionEvent event)     {
+    void BUTTONDIVIDIR(ActionEvent event) {
         operar("/");
     }
 
     //------------------------------------------------------------------------------------------------
-
     @FXML
     void BUTTONELEVAR(ActionEvent event) {
         operar("^");
     }
+
     @FXML
     void BUTTONRAIZ(ActionEvent event) {
         if (numActual.isEmpty()) return;
         double x = Double.parseDouble(numActual);
         if (x >= 0) {
             double resultado = Math.sqrt(x);
-            historial.add("\u221A(" + x + ") = " + resultado);
+            historial.add("√(" + x + ") = " + resultado);
             mostrarResultadoFormateado(resultado);
+            actualizarHistorial();
         } else {
             lblMensaje2.setText("Error: Raíz Negativa");
             numActual = "";
@@ -233,6 +272,7 @@ public class CalGUIController {
             double resultado = Math.log10(x);
             historial.add("log10(" + x + ") = " + resultado);
             mostrarResultadoFormateado(resultado);
+            actualizarHistorial();
         } else {
             lblMensaje2.setText("Error: Log no válido");
             numActual = "";
@@ -258,11 +298,15 @@ public class CalGUIController {
     }
 
     //------------------------------------------------------------------------------------------------
-
     @FXML
     void BUTTONCLEARALL(ActionEvent event) {
-        num1 = 0; num2 = 0; operator = ""; numActual = "";
+        num1 = 0;
+        num2 = 0;
+        operator = "";
+        numActual = "";
         lblMensaje2.setText("");
+        historial.clear();
+        actualizarHistorial();
     }
 
     @FXML
@@ -273,7 +317,6 @@ public class CalGUIController {
     }
 
     //------------------------------------------------------------------------------------------------
-
     @FXML
     void BUTTONSENO(ActionEvent event) {
         if (numActual.isEmpty()) return;
@@ -282,6 +325,7 @@ public class CalGUIController {
             double resultado = Math.sin(Math.toRadians(x));
             historial.add("sin(" + x + "°) = " + resultado);
             mostrarResultadoFormateado(resultado);
+            actualizarHistorial();
         } catch (NumberFormatException e) {
             lblMensaje2.setText("Error");
             numActual = "";
@@ -296,6 +340,7 @@ public class CalGUIController {
             double resultado = Math.cos(Math.toRadians(x));
             historial.add("cos(" + x + "°) = " + resultado);
             mostrarResultadoFormateado(resultado);
+            actualizarHistorial();
         } catch (NumberFormatException e) {
             lblMensaje2.setText("Error");
             numActual = "";
@@ -315,24 +360,31 @@ public class CalGUIController {
             double resultado = Math.tan(Math.toRadians(x));
             historial.add("tan(" + x + "°) = " + resultado);
             mostrarResultadoFormateado(resultado);
+            actualizarHistorial();
         } catch (NumberFormatException e) {
             lblMensaje2.setText("Error");
             numActual = "";
         }
     }
 
-    //-----------------------------------------------------------------------------------------------------------------
-
+    //-------------------------------------------------------------------------------------------------
     @FXML
     void BUTTONHISTORIAL(ActionEvent event) {
-        System.out.println("\n--- HISTORIAL DE LA CALCULADORA ---");
-        if (historial.isEmpty()) {
-            System.out.println("No hay operaciones guardadas.");
-        } else {
-            for (String operacion : historial) {
-                System.out.println(operacion);
-            }
+        actualizarHistorial();
+    }
+
+    private void actualizarHistorial() {
+        if (txtHistorial == null) {
+            return;
         }
-        System.out.println("------------------------------------");
+        if (historial.isEmpty()) {
+            txtHistorial.setText("No hay operaciones guardadas.");
+        } else {
+            StringBuilder sb = new StringBuilder();
+            for (String operacion : historial) {
+                sb.append(operacion).append("\n");
+            }
+            txtHistorial.setText(sb.toString());
+        }
     }
 }

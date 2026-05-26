@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="360.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalBinariosController">
+<AnchorPane prefHeight="520.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalBinariosController">
     <children>
         <VBox alignment="TOP_CENTER" spacing="14.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <children>
@@ -49,7 +50,7 @@
 
                 <HBox alignment="CENTER" prefHeight="32.0" prefWidth="369.0" spacing="10.0">
                     <children>
-                  <Label prefHeight="17.0" prefWidth="71.0" styleClass="bin-label" text="Operador:" />
+                        <Label prefHeight="17.0" prefWidth="71.0" styleClass="bin-label" text="Operador:" />
                         <Button fx:id="BUTTON_MULTIPLICAR" onAction="#BUTTON_MULTIPLICAR" prefHeight="32.0" prefWidth="65.0" styleClass="bin-btn-op" text="*" />
                         <Button fx:id="BUTTON_DIVIDIR" onAction="#BUTTON_DIVIDIR" prefHeight="32.0" prefWidth="65.0" styleClass="bin-btn-op" text="/" />
                         <Button fx:id="BUTTON_SUMA" onAction="#BUTTON_SUMA" prefHeight="32.0" prefWidth="65.0" styleClass="bin-btn-op" text="+" />
@@ -58,11 +59,14 @@
 
                 <HBox alignment="CENTER_LEFT" spacing="8.0">
                     <children>
-                        <Label styleClass="bin-label" text="Resultado:" />
+                        <Label prefHeight="17.0" prefWidth="68.0" styleClass="bin-label" text="Resultado:" />
                         <TextField fx:id="FIELD_RESULTADO" editable="false" prefWidth="300.0" promptText="Aquí aparece el resultado" styleClass="bin-field" />
                     </children>
                 </HBox>
 
+                <Label styleClass="bin-label" text="Historial:" />
+
+                <TextArea fx:id="txtHistorial" editable="false" prefHeight="140.0" prefWidth="400.0" promptText="Aquí se mostrará el historial" wrapText="true" />
             </children>
             <padding>
                 <Insets bottom="8" left="8" right="8" top="8" />
