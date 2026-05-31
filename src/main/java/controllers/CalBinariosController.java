@@ -46,6 +46,8 @@ public class CalBinariosController {
 
     private final List<String> historial = new ArrayList<>();
 
+    //-----------------------------------------------------------------------------------------------------------------
+
     @FXML
     void BUTTON_SUMA(ActionEvent event) {
         try {
@@ -138,6 +140,8 @@ public class CalBinariosController {
             FIELD_RESULTADO.setText("Entrada no válida");
         }
     }
+
+    //-----------------------------------------------------------------------------------------------------------------
 
     private void actualizarHistorial() {
         if (txtHistorial == null) return;

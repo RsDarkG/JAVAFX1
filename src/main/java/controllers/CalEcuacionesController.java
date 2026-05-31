@@ -37,11 +37,11 @@ public class CalEcuacionesController implements Initializable {
     private TextField FIELDRESULTADO;
     @FXML
     private TextArea txtHistorial;
-
     @FXML
     private HBox HBOXD;
-
     private final List<String> historial = new ArrayList<>();
+
+    //-----------------------------------------------------------------------------------------------------------------
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -50,6 +50,8 @@ public class CalEcuacionesController implements Initializable {
         actualizarVista("Lineal");
         actualizarHistorial();
     }
+
+    //-----------------------------------------------------------------------------------------------------------------
 
     @FXML
     void COMBOTIPO(ActionEvent event) {
@@ -81,6 +83,8 @@ public class CalEcuacionesController implements Initializable {
         LBLC.setVisible(true);
         FIELDC.setVisible(true);
     }
+
+    //-----------------------------------------------------------------------------------------------------------------
 
     @FXML
     void BUTTONCALCULAR(ActionEvent event) {
@@ -148,6 +152,8 @@ public class CalEcuacionesController implements Initializable {
 
         actualizarHistorial();
     }
+
+    //-----------------------------------------------------------------------------------------------------------------
 
     private void limpiarCampos() {
         FIELDA.clear();
